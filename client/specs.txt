@@ -1,0 +1,31 @@
+React/Redux Coding Challenge.
+
+High Level --
+	Your goal here is to call a provided API route (/users) in this case with the HTTP library of your choice (axios comes preinstalled), store that data in the redux state, and then create a component to display the data in the way described below.
+	You can use any libraries you see fit, Redux and React are configured for you already, and Lodash and Ramda are included as well. Styling is not a requirement, but the display should be readable
+
+Requirements -- (for your benefit read to completion before starting)
+	1) Make an API call to (/users) and store the relevant information in the Redux state. A reference for the shape of this data can be found in server/controllers/usersData.js
+	2) With the data you have now, write a component that will display the relevant information for each user. The component should display
+		- The user's name
+		- A section for the items currently in the user's cart with the item's name,
+		  price, and whether it was onSale at the time of being added.
+		- A section for the items recently removed from the user's cart that displays
+		  the same information as above for each item.
+	3) Polish your component(s) a little bit
+		- Display "No items in cart" when the cart is empty
+		- Display "No items recently removed" when recentlyRemovedItems is empty
+		- Display a loading state while items are being fetched
+
+
+Time permitting -- (if core requirements are completed before time limit. 
+                   Pick and choose in any order)
+
+	1) Each user has an array of team_member ids. Come up with a way to show a user
+	   which items in their cart their share with their team members
+	   	- This can be as simple as "You share 2 items with people on your team!"
+	   	  Or it can be a listing of what items you share with who
+	2) Create a way to sort items based on their price and whether they were purchased 	   on sale
+	3) Pretend this data is coming from a database. Without actually writing the API's
+	   how would you handle adding new items and deleting items from the user's cart? (Don't forget about recentlyRemovedItems)\
+	4) Make it look pretty
